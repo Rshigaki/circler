@@ -1,16 +1,18 @@
 # circler
 
-A new Flutter project.
+サークル管理を簡単にするアプリ
 
-## Getting Started
+## Todo
 
-This project is a starting point for a Flutter application.
+- ホーム画面の充実
 
-A few resources to get you started if this is your first Flutter project:
+- ハンバーガーメニューの充実
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- カレンダー表示
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- アルバム表示
+
+- 掲示板表示
+
+(上のやつはとりあえず表示だけ)
+(DB連携等は後から)
