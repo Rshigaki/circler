@@ -6,10 +6,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    final String organization_name = 'インカレオーランサークル パッション';
+
+    final AssetImage organization_image = AssetImage('images/aika.png');
+
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue[800],
+        accentColor: Colors.cyan[600],
+      ),
       home: Scaffold(
         appBar: AppBar(title: Text('ホーム'),),
+        backgroundColor: Colors.blue.shade200,
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.yellow,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('ホーム')),
             BottomNavigationBarItem(icon: Icon(Icons.photo_album), title: Text('アルバム')),
@@ -25,19 +37,17 @@ class MyApp extends StatelessWidget {
               DrawerHeader(
                 child: Column(
                   children: <Widget>[
-                    Text('インカレオーランサークル パッション',
+                    Text(organization_name,
                       style: TextStyle(
-                        color: Colors.white,
                       ),
                     ),
                     CircleAvatar(
                       radius: 40.0,
-                      backgroundImage: AssetImage('images/aika.png'),
+                      backgroundImage: organization_image,
                     ),
                   ],
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
                 ),
               ),
               FlatButton(
@@ -50,7 +60,19 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 40,
+                backgroundImage: organization_image,
+              ),
+              Text(organization_name),
+            ],
 
+          )
         ),
       ),
     );
